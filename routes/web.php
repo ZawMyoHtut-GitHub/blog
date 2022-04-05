@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'BlogController@index');
-Route::get('/s', 'BlogController@store');
+Route::get('/edit', 'BlogController@edit');
