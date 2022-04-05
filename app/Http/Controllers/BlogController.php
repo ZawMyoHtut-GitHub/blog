@@ -32,8 +32,8 @@ class BlogController extends Controller
         ];
         $batchSize = 500; // insert 500 (default), 100 minimum rows in one query
 
-        // $result = Batch::insert($userInstance, $columns, $values, $batchSize);
-        $result = batch()->insert($userInstance, $columns, $values, $batchSize);
+        $result = Batch::insert($userInstance, $columns, $values, $batchSize);
+        // $result = batch()->insert($userInstance, $columns, $values, $batchSize);
         
         return $result;   
     }
@@ -57,8 +57,8 @@ class BlogController extends Controller
         ];
         $index = 'id';
         
-        // $result = Batch::update($userInstance, $value, $index);
-        $result = batch()->update($userInstance, $value, $index);
+        $result = Batch::update($userInstance, $value, $index);
+        // $result = batch()->update($userInstance, $value, $index);
         return Blog::All()->toArray();
     }
 }
